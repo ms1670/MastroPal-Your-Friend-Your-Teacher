@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tutor App</string>
+
+<!--    Sign Up Screen-->
+    <string name="user_name_input">User Name</string>
+    <string name="user_name_input_placeholder">Choose Your User Name</string>
+    <string name="password_input">Password</string>
+    <string name="password_input_placeholder">Make Your Password</string>
+
+
+
+</resources>
