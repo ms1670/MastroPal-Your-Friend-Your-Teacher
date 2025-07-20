@@ -2,10 +2,12 @@
 accompanistPager = "0.34.0"
 accompanistPagerIndicators = "0.34.0"
 agp = "8.11.0"
+convetrterMoshi = "2.9.0"
 coreKtxVersion = "1.16.0"
 coreSplashscreen = "1.0.1"
 espressoCoreVersion = "3.6.1"
 firebaseBom = "33.15.0"
+firebaseBomVersion = "YYYY.MM.DD"
 fragmentKtx = "1.8.7"
 fragment = "1.8.7"
 kotlin = "2.1.0"
@@ -23,6 +25,7 @@ firebaseDatabase = "21.0.0"
 material3Version = "1.2.1"
 materialIconsExtended = "1.7.8"
 navigationCompose = "2.9.0"
+retrofit = "3.0.0"
 uiTestJunit4 = "1.8.2"
 uiTestManifest = "1.8.2"
 firebaseAuth = "23.2.1"
@@ -42,9 +45,13 @@ androidx-espresso-core-v351 = { module = "androidx.test.espresso:espresso-core",
 androidx-fragment-dynamic = { module = "androidx.fragment:fragment-dynamic", version = "1.8.7" }
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
 androidx-material3-v121 = { module = "androidx.compose.material3:material3", version.ref = "material3Version" }
+convetrter-moshi = { module = "com.squareup.retrofit2:convetrter-moshi", version.ref = "convetrterMoshi" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-bom-vyyyymmdd = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
 firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+firebase-messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx" }
 fragmentdynamix = { module = "androidx.fragment:fragment-dynamic", version.ref = "fragment" }
 
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
@@ -66,6 +73,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiTestJunit4" }
 ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestManifest" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }

@@ -117,19 +117,35 @@ fun UserProfile(
                             .fillMaxWidth()
                     ) {
                         Image(
-                            painter = painterResource(R.drawable.tuton_img),
+                            painter = painterResource(R.drawable.user_png),
                             contentDescription = "",
                             modifier = Modifier
-                                .width(150.dp)
+                                .width(120.dp)
+                                .border(width = 0.5.dp,
+                                    color = AppColors.Placeholder, // or AppColors.BorderColor
+                                    shape = RoundedCornerShape(16.dp)
+                                )
                         )
 
-                        Text(
-                            text = "User Name",
-                            fontSize = 16.sp,
-                            modifier = Modifier
-                                .padding(8.dp)
-                                .fillMaxWidth()
-                        )
+                       Column(
+                           modifier = Modifier.padding(start = 8.dp)
+                       ) {
+                           Text(
+                               text = "Ajay",
+                               fontWeight = FontWeight.SemiBold,
+                               fontSize = 18.sp,
+                               modifier = Modifier
+                                   .padding(8.dp)
+                                   .fillMaxWidth()
+                           )
+                           Text(
+                               text = "#001",
+                               fontSize = 16.sp,
+                               modifier = Modifier
+                                   .padding(8.dp)
+                                   .fillMaxWidth()
+                           )
+                       }
                     }
 
                 }

@@ -21,6 +21,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.AlertDialogDefaults.containerColor
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenu
@@ -47,6 +48,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.tutorapp1.AppColors
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -248,10 +250,19 @@ fun NotesList(
                                         notesRef.push().setValue(NotesEntered.value)
                                         NotesEntered.value = ""
                                         Toast.makeText(context, "Notes Saved", Toast.LENGTH_LONG).show()
-                                    }
+                                    },
+                                    modifier = Modifier
+                                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                                        .clip(RoundedCornerShape(8.dp))
+                                        .background(AppColors.Primary),
+                                    colors = ButtonDefaults.buttonColors(
+                                        containerColor = AppColors.Primary // ✅ Correct way to set background color
+                                    )
                                 ) {
                                     Text(
                                         text = "Submit",
+                                        fontSize = 16.sp,
+                                        modifier = Modifier
                                     )
                                 }
                             }

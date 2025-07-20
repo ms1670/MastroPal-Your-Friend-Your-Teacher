@@ -112,6 +112,13 @@ dependencies {
     implementation (libs.androidx.credentials.play.services.auth)
     implementation (libs.googleid)
 
+    implementation(libs.firebase.messaging.ktx)
+
+    implementation(libs.firebase.messaging)
+
+    //noinspection NewerVersionAvailable
+    implementation(libs.retrofit)
+  //  implementation(libs.convetrter.moshi)
     implementation(libs.androidx.material3) // or latest
 
 }

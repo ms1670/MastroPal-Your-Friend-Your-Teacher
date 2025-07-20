@@ -3,6 +3,7 @@
 package com.example.tutorapp1
 
 
+import android.R
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -128,13 +129,24 @@ fun HomeScreen(
     Scaffold (
         topBar = {
             TopAppBar(
-                title = { Text("Tutor App") },
+                title = {
+                    Text(
+                    "Tutor App",
+                        color = AppColors.White
+                    )
+                },
                 actions = {
+                    IconButton(onClick = {}) {
+                        Icon(Icons.Default.Notifications,
+                            contentDescription = "",
+                            tint = AppColors.White
+                        )
+                    }
                     IconButton(onClick = {showInfoSheet = true}) {
-                        Icon(Icons.Default.Info, contentDescription = "")
+                        Icon(Icons.Default.Info, contentDescription = "", tint = AppColors.White)
                     }
                     IconButton(onClick = {menuExpanded = true}) {
-                        Icon(Icons.Default.MoreVert, contentDescription = "")
+                        Icon(Icons.Default.MoreVert, contentDescription = "", tint = AppColors.White)
                     }
                     TopBarDropDown(
                         expanded = menuExpanded,
@@ -152,7 +164,8 @@ fun HomeScreen(
                                     onLogout()
                                 }
                             }
-                        }
+                        },
+                        //offset = DpOffset(x = (-16).dp, y = 0.dp),
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -186,42 +199,6 @@ fun HomeScreen(
 //                    }
 
             }
-//            NavigationBar(
-//                containerColor = MaterialTheme.colorScheme.primary,
-//                contentColor = MaterialTheme.colorScheme.onPrimary,
-//            ) {// NavigationBar
-//                NavigationBarItem(
-//                    selected = true,
-//                    onClick = { /* Navigate to Home */ },
-//                    icon = {
-//                        Icon(Icons.Filled.Home, contentDescription = "Home")
-//                    }
-//                )
-//
-//                NavigationBarItem(
-//                    selected = true,
-//                    onClick = { /* do something */ },
-//                    icon = {
-//                        Icon(Icons.Filled.Create, contentDescription = "Menu")
-//                    }
-//                )
-//
-//                NavigationBarItem(
-//                    selected = true,
-//                    onClick = { /* Navigate to Home */ },
-//                    icon = {
-//                        Icon(Icons.Filled.Menu, contentDescription = "Home")
-//                    }
-//                )
-//
-//                NavigationBarItem(
-//                    selected = true,
-//                    onClick = { /* Navigate to Home */ },
-//                    icon = {
-//                        Icon(Icons.Filled.Person, contentDescription = "Home")
-//                    }
-//                )
-//            } // NavigationBar
         },
 
         floatingActionButton = {
@@ -340,7 +317,8 @@ fun BottomAppBar(selected: Int, navController: NavController, onItemSelected: (I
                 )
                 clip = true
             },
-        containerColor = LightColorScheme.PrimaryFixed
+        containerColor = AppColors.Secondary
+        //containerColor = LightColorScheme.PrimaryFixed
 
     ){
         BottomAppBarItem.forEachIndexed { index, BottomNavItems ->

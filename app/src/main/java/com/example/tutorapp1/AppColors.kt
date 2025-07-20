@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.Color
 object AppColors{
     val Primary = Color(0xFF4CAF50)
     val PrimaryVariant = Color(0xFFB18BFF)
-    val Secondary = Color(0xFF03DAC6)
+    val Secondary = Color(0xFFC2FFC5)
     val Background = Color(0xFFFFFFFF)
     val Surface = Color(0xFFF1F1F1)
     val CardBG = Color(0xFFDBE2E8)
