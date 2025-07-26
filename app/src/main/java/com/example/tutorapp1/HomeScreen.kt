@@ -2,7 +2,6 @@
 
 package com.example.tutorapp1
 
-
 import android.R
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
